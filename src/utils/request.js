@@ -4,13 +4,13 @@
  * @ created_at: 2023-02-27 10:36:58
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 11:05:21
+ * @ modified_time: 2023-05-29 19:03:40
  */
 // import {getToken,removeToken} from '../utils/auth';
-import env from './env';
 
 function service(options = {}) {
-  options.url = `${env.baseUrl}${options.url}`;
+  const env = import.meta.env.MODE === 'development' ? 'http://192.168.10.85:10300' : 'http://192.168.10.85:10301';
+  options.url = `${env}${options.url}`;
   // 判断本地是否存在token，如果存在则带上请求头
   // if (getToken()) {
   //     options.header = {

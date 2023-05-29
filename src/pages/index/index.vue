@@ -4,17 +4,18 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 16:25:23
+ * @ modified_time: 2023-05-29 17:57:14
 -->
 <template>
-  <view class="content">
+  <div class="content">
     <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
+    <div class="text-area">
       <van-button class="btn" type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
       <i class="iconfont icon-fenlei"> </i>
       <TabBar />
-    </view>
-  </view>
+    </div>
+    <img :src="userInfo.avatarUrl" alt="" />
+  </div>
 </template>
 
 <script setup>
@@ -22,10 +23,31 @@ import TabBar from '@components/TabBar';
 import { getStreetApi } from '../../api';
 import useStore from '../../store';
 
+const userInfo = ref({});
 const store = useStore();
 const data = computed(() => store.count.getCount());
 const handleBtn = async () => {
   store.count.setCount();
+  wx.login({
+    success: (res) => {
+      console.log('loginres', res);
+    },
+    fail: (error) => {
+      console.log('error', error);
+    },
+  });
+  wx.getUserProfile({
+    desc: '用于完善个人资料',
+    success: (res) => {
+      console.log('Res', res);
+
+      userInfo.value = res.userInfo;
+    },
+    fail: (error) => {
+      console.log('error', error);
+    },
+  });
+
   console.log('getStreetApi', await getStreetApi({ aa: 1 }));
 };
 </script>
