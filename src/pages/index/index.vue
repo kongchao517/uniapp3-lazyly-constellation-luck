@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 11:04:14
+ * @ modified_time: 2023-05-29 11:30:52
 -->
 <template>
   <view class="content">
@@ -12,6 +12,7 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
       <van-button class="btn" type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
+      <i class="iconfont icon-fenlei"> </i>
     </view>
   </view>
 </template>
@@ -47,12 +48,6 @@ const handleBtn = async () => {
   .text-area {
     display: flex;
     justify-content: center;
-
-    .btn {
-      .van-button--primary {
-        background-color: red;
-      }
-    }
   }
 }
 

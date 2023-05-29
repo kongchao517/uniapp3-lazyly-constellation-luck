@@ -1,0 +1,30 @@
+{
+  "id": "4092058",
+  "name": "uniapp-vue3",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "947113",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "6529895",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e706",
+      "unicode_decimal": 59142
+    },
+    {
+      "icon_id": "11016134",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    }
+  ]
+}

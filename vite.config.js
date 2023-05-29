@@ -1,14 +1,14 @@
 /*
- * @ description: 
+ * @ description:
  * @ author: kongchao
  * @ created_at: 2023-05-25 16:30:49
- * @ modified_record: 
+ * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 09:39:00
+ * @ modified_time: 2023-05-29 11:22:30
  */
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import uni from '@dcloudio/vite-plugin-uni'
+import uni from '@dcloudio/vite-plugin-uni';
 import AutoImport from 'unplugin-auto-import/vite';
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +16,7 @@ export default defineConfig({
     uni(),
     AutoImport({
       dts: 'auto-imports.d.ts',
-    })
+    }),
   ],
   resolve: {
     extensions: ['.js', '.vue', '.mjs'],
@@ -33,7 +33,7 @@ export default defineConfig({
       '@api': resolve(__dirname, 'src/api'),
       '@g': resolve(__dirname, 'src/global'),
       '@page': resolve(__dirname, 'src/views/page'),
-      '@static': resolve(__dirname, 'src/static')
+      '@static': resolve(__dirname, 'src/static'),
     },
   },
-})
+});
