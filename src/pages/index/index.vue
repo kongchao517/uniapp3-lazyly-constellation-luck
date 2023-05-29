@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 13:35:11
+ * @ modified_time: 2023-05-29 16:25:23
 -->
 <template>
   <view class="content">
@@ -49,6 +49,10 @@ const handleBtn = async () => {
   .text-area {
     display: flex;
     justify-content: center;
+
+    .btn button {
+      background-color: red;
+    }
   }
 }
 
