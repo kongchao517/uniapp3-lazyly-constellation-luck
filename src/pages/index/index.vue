@@ -4,20 +4,21 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 11:30:52
+ * @ modified_time: 2023-05-29 13:35:11
 -->
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
-      <text class="title">{{ title }}</text>
       <van-button class="btn" type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
       <i class="iconfont icon-fenlei"> </i>
+      <TabBar />
     </view>
   </view>
 </template>
 
 <script setup>
+import TabBar from '@components/TabBar';
 import { getStreetApi } from '../../api';
 import useStore from '../../store';
 

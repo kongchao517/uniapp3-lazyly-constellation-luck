@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 11:22:30
+ * @ modified_time: 2023-05-29 14:08:57
  */
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
@@ -34,6 +34,7 @@ export default defineConfig({
       '@g': resolve(__dirname, 'src/global'),
       '@page': resolve(__dirname, 'src/views/page'),
       '@static': resolve(__dirname, 'src/static'),
+      '@pages': resolve(__dirname, 'src/pages'),
     },
   },
 });

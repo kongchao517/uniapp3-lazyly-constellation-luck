@@ -5,6 +5,18 @@
       "style": {
         "navigationBarTitleText": "uni-app"
       }
+    },
+    {
+      "path": "pages/classify/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
     }
   ],
   //分包
@@ -27,5 +39,21 @@
       "van-button": "/wxcomponents/vant/button/index",
       "van-field": "/wxcomponents/vant/field/index"
     }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
   }
 }
