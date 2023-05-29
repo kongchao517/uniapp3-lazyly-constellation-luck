@@ -4,7 +4,7 @@
  * @ created_at: 2023-02-27 10:36:58
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 10:42:43
+ * @ modified_time: 2023-05-29 11:05:21
  */
 // import {getToken,removeToken} from '../utils/auth';
 import env from './env';
@@ -32,7 +32,7 @@ function service(options = {}) {
         // 登陆失效
         if (res.data.code === 403) {
           // 清除本地token
-          removeToken();
+          // removeToken();
           // 关闭所有页面返回到登录页
           uni.reLaunch({
             url: '/pages/index',

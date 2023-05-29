@@ -4,7 +4,7 @@
  * @ created_at: 2023-02-27 10:36:58
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 10:42:22
+ * @ modified_time: 2023-05-29 11:05:11
  */
 const { defineConfig } = require('eslint-define-config');
 
@@ -25,6 +25,10 @@ module.exports = defineConfig({
     ecmaFeatures: {
       jsx: true,
     },
+  },
+  globals: {
+    uni: true,
+    wx: true,
   },
   extends: [
     'eslint-config-airbnb-base',
@@ -105,6 +109,5 @@ module.exports = defineConfig({
     'no-unused-expressions': 0,
     'no-nested-ternary': 0,
     'no-unsafe-optional-chaining': 0,
-    'no-undef': 0,
   },
 });

@@ -4,14 +4,14 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 10:30:34
+ * @ modified_time: 2023-05-29 11:04:14
 -->
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
       <text class="title">{{ title }}</text>
-      <van-button type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
+      <van-button class="btn" type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
     </view>
   </view>
 </template>
@@ -28,26 +28,32 @@ const handleBtn = async () => {
 };
 </script>
 
-<style>
+<style lang="scss">
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
+  .logo {
+    height: 200rpx;
+    width: 200rpx;
+    margin-top: 200rpx;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50rpx;
+  }
 
-.text-area {
-  display: flex;
-  justify-content: center;
+  .text-area {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      .van-button--primary {
+        background-color: red;
+      }
+    }
+  }
 }
 
 .title {

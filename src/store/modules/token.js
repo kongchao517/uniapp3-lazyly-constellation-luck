@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-29 09:57:00
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 09:58:45
+ * @ modified_time: 2023-05-29 11:05:37
  */
 import { defineStore } from 'pinia';
 
@@ -14,13 +14,13 @@ export const useTokenStore = defineStore('Token', {
   }),
   actions: {
     setToken(val) {
-      return uni.setStorageSync(TokenKey, val);
+      return uni.setStorageSync(this.TokenKey, val);
     },
     getToken() {
-      return uni.getStorageSync(TokenKey);
+      return uni.getStorageSync(this.TokenKey);
     },
     removetoken() {
-      return uni.removeStorageSync(TokenKey);
+      return uni.removeStorageSync(this.TokenKey);
     },
   },
 });
