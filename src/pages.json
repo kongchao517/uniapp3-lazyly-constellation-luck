@@ -3,19 +3,25 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "app-plus": {
+          "titleNView": false //去掉app+h5顶部导航
+        }
       }
     },
     {
       "path": "pages/classify/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "app-plus": {
+          "titleNView": false //去掉app+h5顶部导航
+        }
       }
     },
     {
       "path": "pages/mine/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "app-plus": {
+          "titleNView": false //去掉app+h5顶部导航
+        }
       }
     }
   ],
