@@ -4,12 +4,12 @@
  * @ created_at: 2023-02-27 10:36:58
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 19:03:40
+ * @ modified_time: 2023-05-30 11:32:09
  */
 // import {getToken,removeToken} from '../utils/auth';
 
 function service(options = {}) {
-  const env = import.meta.env.MODE === 'development' ? 'http://192.168.10.85:10300' : 'http://192.168.10.85:10301';
+  const env = import.meta.env.VITE_APP_API_BASE_URL;
   options.url = `${env}${options.url}`;
   // 判断本地是否存在token，如果存在则带上请求头
   // if (getToken()) {
