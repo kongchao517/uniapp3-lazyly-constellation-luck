@@ -4,15 +4,18 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 17:57:14
+ * @ modified_time: 2023-05-30 11:22:22
 -->
 <template>
   <div class="content">
     <image class="logo" src="/static/logo.png"></image>
     <div class="text-area">
-      <van-button class="btn" type="primary" @click="handleBtn">主要按钮{{ data }}</van-button>
+      <button type="primary" @click="handleBtn">主要按钮{{ data }}</button>
       <i class="iconfont icon-fenlei"> </i>
       <TabBar />
+      <uni-badge size="small" :text="100" absolute="rightBottom" type="primary">
+        <button type="default">右下</button>
+      </uni-badge>
     </div>
     <img :src="userInfo.avatarUrl" alt="" />
   </div>

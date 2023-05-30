@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-29 14:36:55
+ * @ modified_time: 2023-05-30 11:21:35
 -->
 <template>
   <div></div>
@@ -20,13 +20,4 @@ export default {
 };
 </script>
 
-<style>
-/*每个页面公共css */
-@import 'wxcomponents/vant/common/index.wxss';
-
-#app {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-</style>
+<style></style>

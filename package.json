@@ -58,6 +58,7 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-3071120230427001",
     "@dcloudio/uni-mp-weixin": "3.0.0-3071120230427001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3071120230427001",
+    "@dcloudio/uni-ui": "^1.4.27",
     "@vant/weapp": "^1.10.19",
     "cz-git": "^1.6.1",
     "eslint": "^8.31.0",
