@@ -1,8 +1,6 @@
 ## uniapp vue3
 
-
-
-技术栈：uniapp+vue3+pinia+vant
+技术栈：uniapp+vue3+pinia+uni-ui
 
 启动小程序命令
 
