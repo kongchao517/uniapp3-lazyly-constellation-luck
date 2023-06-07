@@ -1,4 +1,4 @@
-## uniapp vue3
+## 星座运势
 
 技术栈：uniapp+vue3+pinia+uni-ui
 

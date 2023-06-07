@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-30 11:22:22
+ * @ modified_time: 2023-05-31 16:22:21
 -->
 <template>
   <div class="content">
@@ -17,6 +17,7 @@
         <button type="default">右下</button>
       </uni-badge>
     </div>
+    111111111
     <img :src="userInfo.avatarUrl" alt="" />
   </div>
 </template>

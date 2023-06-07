@@ -4,7 +4,7 @@
  * @ created_at: 2023-05-25 16:30:49
  * @ modified_record:
  * @ modified_by: kongchao
- * @ modified_time: 2023-05-30 11:21:35
+ * @ modified_time: 2023-05-31 16:21:46
 -->
 <template>
   <div></div>
@@ -16,6 +16,9 @@ export default {
   onLaunch() {
     uni.hideTabBar();
     console.log('App Launch');
+    // document.onselectstart = () => {
+    //   return false;
+    // };
   },
 };
 </script>
