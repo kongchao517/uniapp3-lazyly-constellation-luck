@@ -8,7 +8,12 @@
 -->
 <template>
   <div class="tab-bar">
-    <div v-for="(item, index) in list" :key="index" class="tab-bar-item" @click="switchTab(item.pagePath, index)">
+    <div
+      v-for="(item, index) in list"
+      :key="index"
+      class="tab-bar-item"
+      @click="switchTab(item.pagePath, index, item.param)"
+    >
       <div :style="{ color: index + 1 === tabbarIndex ? selectedColor : color }">
         <i :class="`iconfont ${item.icon}`"></i>
         <div class="tab_text">{{ item.text }}</div>
@@ -21,37 +26,53 @@
 import useStore from '../../store';
 
 const stroe = useStore();
-const color = '#888888';
-const selectedColor = '#538bfa';
+const color = '#e1e1e1';
+const selectedColor = '#e07d93';
 const tabbarIndex = computed({
   get() {
-    return stroe.tabbarIndex.getTabbar();
+    return stroe.tabbar.getTabbar();
   },
   set(val) {
-    stroe.tabbarIndex.setTabbar(val);
+    stroe.tabbar.setTabbar(val);
   },
 });
 const list = [
   {
-    pagePath: '/pages/index/index',
-    text: '首页',
-    icon: 'icon-shouye',
+    pagePath: '/pages/Today/index',
+    text: '今天',
+    param: 'toDay',
+    icon: 'icon-jintian',
   },
   {
-    pagePath: '/pages/classify/index',
-    text: '分类',
-    icon: 'icon-fenlei',
+    pagePath: '/pages/Tomorrow/index',
+    text: '明天',
+    param: 'tomorrow',
+    icon: 'icon-biaozhundaxiaotubiao-',
   },
   {
-    pagePath: '/pages/mine/index',
-    text: '我的',
-    icon: 'icon-wode',
+    pagePath: '/pages/Week/index',
+    text: '本周',
+    param: 'week',
+    icon: 'icon-benzhou',
+  },
+  {
+    pagePath: '/pages/Month/index',
+    text: '本月',
+    param: 'month',
+    icon: 'icon-benyue',
+  },
+  {
+    pagePath: '/pages/Year/index',
+    text: '本年',
+    param: 'year',
+    icon: 'icon-bennian',
   },
 ];
 
-const switchTab = (pagePath, index) => {
+const switchTab = (pagePath, index, tabbarLabel) => {
   tabbarIndex.value = index + 1;
-  uni.switchTab({
+  stroe.tabbar.setTabbarLabel(tabbarLabel);
+  uni.reLaunch({
     url: pagePath,
   });
 };
@@ -77,6 +98,11 @@ const switchTab = (pagePath, index) => {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 12px;
+
+    .iconfont {
+      font-size: 24px;
+    }
   }
 }
 </style>

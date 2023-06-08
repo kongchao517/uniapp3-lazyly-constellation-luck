@@ -6,6 +6,6 @@
  * @ modified_by: kongchao
  * @ modified_time: 2023-05-29 10:40:33
  */
-import { post } from '@/utils/request';
-// 获取街道
-export const getStreetApi = (params) => post('/dim-street-enum/getList', params);
+import { get } from '@/utils/request';
+// 获取星座运势
+export const getAll = (params) => get('/constellation/getAll', params);

@@ -7,7 +7,6 @@
  * @ modified_time: 2023-05-30 11:32:09
  */
 // import {getToken,removeToken} from '../utils/auth';
-
 function service(options = {}) {
   const env = import.meta.env.VITE_APP_API_BASE_URL;
   options.url = `${env}${options.url}`;
@@ -18,31 +17,21 @@ function service(options = {}) {
   //         'Authorization': `${getToken()}`	// 这里是token(可自行修改)
   //     };
   // }
-
   return new Promise((resolved, rejected) => {
     options.success = (res) => {
       // 如果请求回来的状态码不是200则执行以下操作
-      if (res.data.code !== 200) {
+      if (res.data.resultcode !== '200') {
         // 非成功状态码弹窗
         uni.showToast({
           icon: 'none',
           duration: 3000,
-          title: `${res.data.msg}`,
+          title: `${res.data.reason}`,
         });
-        // 登陆失效
-        if (res.data.code === 403) {
-          // 清除本地token
-          // removeToken();
-          // 关闭所有页面返回到登录页
-          uni.reLaunch({
-            url: '/pages/index',
-          });
-        }
         // 返回错误信息
         rejected(res);
       } else {
         // 请求回来的状态码为200则返回内容
-        resolved(res.data.dataInfo);
+        resolved(res.data);
       }
     };
     options.fail = (err) => {
@@ -80,11 +69,11 @@ export const post = (url, data = {}, params = {}) => {
  * @param {string} url
  * @param {object} params
  */
-export const get = (url, params = {}) => {
+export const get = (url, data = {}) => {
   return service({
     method: 'get',
     url,
-    params,
+    data,
   });
 };
 

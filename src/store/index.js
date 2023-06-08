@@ -6,14 +6,14 @@
  * @ modified_by: kongchao
  * @ modified_time: 2023-05-29 13:50:45
  */
-import { useCountStore } from './modules/count';
-import { useTokenStore } from './modules/token';
 import { useTabbarStore } from './modules/tabbar';
+import { useConstellationStore } from './modules/constella';
+import { useNavStore } from './modules/nav';
 
 export default function useStore() {
   return {
-    count: useCountStore(),
-    token: useTokenStore(),
-    tabbarIndex: useTabbarStore(),
+    tabbar: useTabbarStore(),
+    constellation: useConstellationStore(),
+    nav: useNavStore(),
   };
 }

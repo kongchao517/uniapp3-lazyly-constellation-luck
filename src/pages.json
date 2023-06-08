@@ -1,41 +1,61 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/Today/index",
       "style": {
+        "navigationBarTitleText": "星座运势",
+        "navigationBarBackgroundColor": "#e47e91",
+        "navigationBarTextStyle": "white",
         "app-plus": {
           "titleNView": false //去掉app+h5顶部导航
         }
       }
     },
     {
-      "path": "pages/classify/index",
+      "path": "pages/Tomorrow/index",
       "style": {
+        "navigationBarTitleText": "星座运势",
+        "navigationBarBackgroundColor": "#e47e91",
+        "navigationBarTextStyle": "white",
         "app-plus": {
           "titleNView": false //去掉app+h5顶部导航
         }
       }
     },
     {
-      "path": "pages/mine/index",
+      "path": "pages/Week/index",
       "style": {
+        "navigationBarTitleText": "星座运势",
+        "navigationBarBackgroundColor": "#e47e91",
+        "navigationBarTextStyle": "white",
+        "app-plus": {
+          "titleNView": false //去掉app+h5顶部导航
+        }
+      }
+    },
+    {
+      "path": "pages/Month/index",
+      "style": {
+        "navigationBarTitleText": "星座运势",
+        "navigationBarBackgroundColor": "#e47e91",
+        "navigationBarTextStyle": "white",
+        "app-plus": {
+          "titleNView": false //去掉app+h5顶部导航
+        }
+      }
+    },
+    {
+      "path": "pages/Year/index",
+      "style": {
+        "navigationBarTitleText": "星座运势",
+        "navigationBarBackgroundColor": "#e47e91",
+        "navigationBarTextStyle": "white",
         "app-plus": {
           "titleNView": false //去掉app+h5顶部导航
         }
       }
     }
   ],
-  //分包
-  // "subPackages": [
-  //   {
-  //     "root": "pages/sub",
-  //     "pages": [
-  //       {
-  //         "path": "index/index"
-  //       }
-  //     ]
-  //   }
-  // ],
   "easycom": {
     "autoscan": true,
     "custom": {
@@ -50,18 +70,27 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
+    "custom": true,
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/Today/index",
+        "text": "今天"
       },
       {
-        "pagePath": "pages/classify/index",
-        "text": "分类"
+        "pagePath": "pages/Tomorrow/index",
+        "text": "明天"
       },
       {
-        "pagePath": "pages/mine/index",
-        "text": "我的"
+        "pagePath": "pages/Week/index",
+        "text": "本周"
+      },
+      {
+        "pagePath": "pages/Month/index",
+        "text": "本月"
+      },
+      {
+        "pagePath": "pages/Year/index",
+        "text": "本年"
       }
     ]
   }

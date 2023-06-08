@@ -67,11 +67,11 @@ module.exports = defineConfig({
     // 禁止对 function 的参数进行重新赋值
     'no-param-reassign': 0,
     // 禁用特定的语法
-    'no-restricted-syntax': 1,
+    'no-restricted-syntax': 0,
     // 禁止在变量定义之前使用它们
     'no-use-before-define': 1,
     // 禁止直接调用 Object.prototypes 的内置属性
-    'no-prototype-builtins': 1,
+    'no-prototype-builtins': 0,
     // 禁止可以在有更简单的可替代的表达式时使用三元操作符
     'no-unneeded-ternary': 2,
     // 禁止重复模块导入
@@ -109,5 +109,6 @@ module.exports = defineConfig({
     'no-unused-expressions': 0,
     'no-nested-ternary': 0,
     'no-unsafe-optional-chaining': 0,
+    'guard-for-in': 0,
   },
 });

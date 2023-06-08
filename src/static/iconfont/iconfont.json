@@ -1,10 +1,45 @@
 {
   "id": "4092058",
-  "name": "uniapp-vue3",
+  "name": "星座运势图标",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "700788",
+      "name": "本年",
+      "font_class": "bennian",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "3884386",
+      "name": "明天见",
+      "font_class": "biaozhundaxiaotubiao-",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "4784074",
+      "name": "本月",
+      "font_class": "benyue",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "4784075",
+      "name": "本周",
+      "font_class": "benzhou",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "4784096",
+      "name": "今天",
+      "font_class": "jintian",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
     {
       "icon_id": "947113",
       "name": "我的",

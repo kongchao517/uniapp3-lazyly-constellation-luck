@@ -61,6 +61,7 @@
     "@dcloudio/uni-ui": "^1.4.27",
     "@vant/weapp": "^1.10.19",
     "cz-git": "^1.6.1",
+    "dayjs": "^1.11.8",
     "eslint": "^8.31.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
