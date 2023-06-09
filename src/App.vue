@@ -10,14 +10,14 @@
   <div></div>
 </template>
 <script>
-// // 只能在App.vue里监听应用的生命周期
-// export default {
-//   // 使用自定义tabbar 关闭自带tabbar
-//   onLaunch() {
-//     uni.hideTabBar();
-//     console.log('App Launch');
-//   },
-// };
+// 只能在App.vue里监听应用的生命周期
+export default {
+  // 使用自定义tabbar 关闭自带tabbar
+  onLaunch() {
+    uni.hideTabBar();
+    console.log('App Launch');
+  },
+};
 </script>
 
 <style></style>
