@@ -16,7 +16,7 @@
           {{ PublicConstellation.date }}
         </div>
       </div>
-      <div class="fortune">
+      <div v-if="PublicConstellation.data" class="fortune">
         <template v-for="(item, index) in PublicConstellation.data" :key="item.label + index">
           <div v-if="item.type === 'score'" class="fortune-type-score">
             <div class="fortune-type-score-rate">{{ item.label }}:</div>
@@ -55,7 +55,7 @@ const getApiconstella = async (navLabel, tabbarLabel) => {
   // const params = { consName: navLabel, type: tabbarLabel };
   const params = { consName: navLabel, type: tabbarLabel, key: '8b85315d276ee70ed029ad8ecd542283' };
   const res = await getAll(params);
-
+  if (res.resultcode !== '200') PublicConstellation.value.data = [];
   PublicConstellation.value.data = PublicConstellation.value.data.map((el) => {
     if (res.hasOwnProperty('mima')) {
       res.info = res.mima.info;
@@ -82,7 +82,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .hh {
-  height: calc(100vh - 100rpx);
+  height: calc(100vh - 180rpx);
   overflow: scroll;
   .box {
     width: 95%;
@@ -133,7 +133,6 @@ onMounted(() => {
     }
     .fortune {
       margin-top: 20rpx;
-      margin-bottom: 20rpx;
       .fortune-type-score {
         display: flex;
         .fortune-type-score-rate {
@@ -143,7 +142,7 @@ onMounted(() => {
           line-height: 66rpx;
         }
         .xx {
-          margin-top: 13rpx;
+          margin-top: 10rpx;
           margin-left: 10rpx;
         }
       }

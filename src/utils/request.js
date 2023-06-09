@@ -25,10 +25,10 @@ function service(options = {}) {
         uni.showToast({
           icon: 'none',
           duration: 3000,
-          title: `${res.data.reason}`,
+          title: `${res.data.resultcode === '112' ? '今天试用已过！(50次)' : res.data.reason}`,
         });
         // 返回错误信息
-        rejected(res);
+        resolved(res.data);
       } else {
         // 请求回来的状态码为200则返回内容
         resolved(res.data);

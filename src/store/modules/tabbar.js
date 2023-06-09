@@ -55,7 +55,6 @@ export const useTabbarStore = defineStore('tabbarIndex', {
           .format('YYYY年MM月DD日')}`,
         data: [
           { label: '健康运势', props: 'health', type: '' },
-          { label: '健康', props: 'health', type: '' },
           { label: '爱情运势', props: 'love', type: '' },
           { label: '财运运势', props: 'money', type: '' },
           { label: '工作运势', props: 'work', type: 'score' },
