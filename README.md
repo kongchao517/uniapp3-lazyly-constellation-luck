@@ -4,4 +4,8 @@
 
 启动小程序命令
 
-yarn dev:mp-weixin
+yarn dev:mp-weixin-dev
+
+启动h5 
+
+yarn dev:h5
