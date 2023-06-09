@@ -9,7 +9,11 @@
 // import {getToken,removeToken} from '../utils/auth';
 function service(options = {}) {
   const env = import.meta.env.VITE_APP_API_BASE_URL;
-  options.url = `${env}${options.url}`;
+  // 获取当前属于小程序还是h5，小程序需要加env，h5反之
+  const port = uni.getSystemInfoSync().platform;
+  port === 'android' || port === 'ios' ? (options.url = `${options.url}`) : (options.url = `${env}${options.url}`);
+
+  // options.url = `${options.url}`;
   // 判断本地是否存在token，如果存在则带上请求头
   // if (getToken()) {
   //     options.header = {

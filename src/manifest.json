@@ -76,6 +76,18 @@
     "title": "uniapp-vue3",
     "router": {
       "mode": "history"
+    },
+    "devServer": {
+      "proxy": {
+        "/api": {
+          "target": "https://web.juhe.cn",
+          "changeOrigin": true, //是否跨域
+          "secure": false, // 设置支持https协议的代理
+          "pathRewrite": {
+            "^/api": "" //这里一定要留空，不然有问题
+          }
+        }
+      }
     }
   }
 }
