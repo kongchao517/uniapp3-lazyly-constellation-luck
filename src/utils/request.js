@@ -11,7 +11,9 @@ function service(options = {}) {
   const env = import.meta.env.VITE_APP_API_BASE_URL;
   // 获取当前属于小程序还是h5，小程序需要加env，h5反之
   const port = uni.getSystemInfoSync().platform;
-  port === 'android' || port === 'ios' ? (options.url = `${options.url}`) : (options.url = `${env}${options.url}`);
+  console.log('port', port);
+  // port === 'android' || port === 'ios' ? (options.url = `${options.url}`) : (options.url = `${env}${options.url}`);
+  options.url = `${env}${options.url}`;
 
   // options.url = `${options.url}`;
   // 判断本地是否存在token，如果存在则带上请求头
@@ -23,6 +25,7 @@ function service(options = {}) {
   // }
   return new Promise((resolved, rejected) => {
     options.success = (res) => {
+      console.log('res', res);
       // 如果请求回来的状态码不是200则执行以下操作
       if (res.data.resultcode !== '200') {
         // 非成功状态码弹窗
